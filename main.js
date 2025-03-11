@@ -5,8 +5,13 @@ document.getElementById('Btn').addEventListener('click', function() {
 
     if (isNaN(num1) || isNaN(num2) || num1 < 40 || num1 > 60 || num2 < 40 || num2 > 60) {
         resultDiv.innerHTML = "Invalid input. numbers must be between 40 and 60";
+        document.querySelector('#result').style.color = 'red'
     } else {
         const largest = Math.max(num1, num2);
         resultDiv.innerHTML = `The largest number is: ${largest}`;
+        document.querySelector('#result').style.color = 'limegreen'
+    }
+    if (num1 === num2) {  
+        resultDiv.innerHTML = "numbers are equal";
     }
 });
